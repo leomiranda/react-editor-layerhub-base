@@ -1,5 +1,6 @@
 import { Canvas, useEditor } from '@layerhub-io/react';
 import { useCallback } from 'react';
+import Toolbox from './Toolbox/Toolbox';
 
 export default function Editor() {
 	const editor = useEditor();
@@ -17,7 +18,7 @@ export default function Editor() {
 	}, [editor]);
 
 	return (
-		<div className="flex flex-col w-screen h-screen bg-[#e5e7eb]">
+		<div className="flex flex-col w-screen h-screen bg-[#ECF0F1]">
 			<div className="h-20 flex items-center justify-between p-8 border-b border-white">
 				<h1 className="text-3xl font-semmibold text-gray-700">
 					<span className="font-bold">React</span>Editor
@@ -32,8 +33,13 @@ export default function Editor() {
 				</div>
 			</div>
 
-			<div className="w-full h-full relative flex flex-1 bg-gray-50">
-				<Canvas />
+			<div className="w-full h-full relative flex flex-1 ">
+				<div className="flex items-center justify-between w-full h-full">
+					<div className="flex felx-1 justify-center w-full h-full">
+						<Canvas />
+					</div>
+					<Toolbox />
+				</div>
 			</div>
 		</div>
 	);
