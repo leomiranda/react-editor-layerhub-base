@@ -14,6 +14,7 @@ export default function Editor() {
 				fontSize: 48,
 				fontFamily: 'sans-serif',
 			});
+			editor.history.undo();
 		}
 	}, [editor]);
 
